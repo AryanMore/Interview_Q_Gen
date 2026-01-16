@@ -1,0 +1,86 @@
+MachineLearning:
+  - Python
+  - TensorFlow
+  - PyTorch
+  - Keras
+  - CNN
+  - RNN
+  - LSTM
+  - Transformer
+  - NLP
+  - Computer Vision
+  - Feature Engineering
+  - Model Deployment
+  - MLOps
+  - Scikit Learn
+  - HuggingFace
+  - BERT
+  - GPT
+  - Transfer Learning
+  - Data Augmentation
+  - Hyperparameter Tuning
+
+DataScience:
+  - Pandas
+  - NumPy
+  - Matplotlib
+  - Seaborn
+  - Statistics
+  - A/B Testing
+  - Time Series
+  - Exploratory Data Analysis
+  - PowerBI
+  - Tableau
+  - SQL
+  - Data Warehousing
+  - ETL
+  - BigQuery
+
+Backend:
+  - FastAPI
+  - Django
+  - Flask
+  - REST API
+  - Microservices
+  - NodeJS
+  - Authentication
+  - System Design
+  - PostgreSQL
+  - MongoDB
+  - Redis
+  - Kafka
+  - GraphQL
+  - Docker
+  - Kubernetes
+
+DevOps:
+  - CI/CD
+  - GitHub Actions
+  - Jenkins
+  - AWS
+  - Azure
+  - GCP
+  - Terraform
+  - Monitoring
+  - Logging
+  - Nginx
+
+Frontend:
+  - React
+  - Angular
+  - JavaScript
+  - TypeScript
+  - HTML
+  - CSS
+  - Redux
+  - NextJS
+
+HR_PM:
+  - Talent Acquisition
+  - ATS
+  - Stakeholder Management
+  - Agile
+  - Scrum
+  - Requirement Gathering
+  - Sprint Planning
+  - Product Roadmap

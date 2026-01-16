@@ -1,0 +1,56 @@
+MachineLearning:
+  CNN:
+    concepts:
+      - Backpropagation
+      - Feature Maps
+      - Pooling
+      - Transfer Learning
+    relations:
+      - [Backpropagation, CAUSES, Vanishing Gradient]
+      - [Vanishing Gradient, MITIGATED_BY, Batch Normalization]
+
+  NLP:
+    concepts:
+      - Tokenization
+      - Embeddings
+      - Attention
+    relations:
+      - [Tokenization, REQUIRED_FOR, Embeddings]
+      - [Embeddings, REQUIRED_FOR, Attention]
+
+Backend:
+  REST API:
+    concepts:
+      - Authentication
+      - Rate Limiting
+      - Caching
+    relations:
+      - [No Caching, CAUSES, High Latency]
+      - [High Latency, MITIGATED_BY, Redis]
+
+  Microservices:
+    concepts:
+      - Service Discovery
+      - Load Balancing
+      - Circuit Breaker
+    relations:
+      - [No Circuit Breaker, CAUSES, Cascading Failure]
+
+DataScience:
+  Statistics:
+    concepts:
+      - Hypothesis Testing
+      - P Value
+      - Confidence Interval
+
+DevOps:
+  Docker:
+    concepts:
+      - Containerization
+      - Image Optimization
+
+HR_PM:
+  Agile:
+    concepts:
+      - Sprint Planning
+      - Retrospective

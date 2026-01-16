@@ -1,0 +1,20 @@
+fastapi
+uvicorn
+streamlit
+python-multipart
+requests
+
+# NLP & ML
+sentence-transformers
+spacy
+pdfplumber
+pyyaml
+
+# Databases
+neo4j
+qdrant-client
+
+# Utils
+numpy
+pandas
+scikit-learn

@@ -1,0 +1,14 @@
+source,relation,target
+MachineLearning,HAS_SKILL,CNN
+CNN,HAS_CONCEPT,Backpropagation
+CNN,HAS_CONCEPT,Vanishing Gradient
+CNN,HAS_CONCEPT,Batch Normalization
+CNN,HAS_CONCEPT,Transfer Learning
+Backend,HAS_SKILL,SQL
+SQL,HAS_CONCEPT,Indexing
+SQL,HAS_CONCEPT,Query Optimization
+SQL,HAS_CONCEPT,Normalization
+Python,HAS_SKILL,Python
+Python,HAS_CONCEPT,GIL
+Python,HAS_CONCEPT,Multithreading
+Python,HAS_CONCEPT,Memory Management

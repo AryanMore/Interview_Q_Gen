@@ -1,0 +1,35 @@
+source,relation,target
+MachineLearning,HAS_SKILL,CNN
+CNN,HAS_CONCEPT,Backpropagation
+CNN,HAS_CONCEPT,Feature Maps
+CNN,HAS_CONCEPT,Pooling
+CNN,HAS_CONCEPT,Transfer Learning
+Backpropagation,CAUSES,Vanishing Gradient
+Vanishing Gradient,MITIGATED_BY,Batch Normalization
+MachineLearning,HAS_SKILL,NLP
+NLP,HAS_CONCEPT,Tokenization
+NLP,HAS_CONCEPT,Embeddings
+NLP,HAS_CONCEPT,Attention
+Tokenization,REQUIRED_FOR,Embeddings
+Embeddings,REQUIRED_FOR,Attention
+Backend,HAS_SKILL,REST API
+REST API,HAS_CONCEPT,Authentication
+REST API,HAS_CONCEPT,Rate Limiting
+REST API,HAS_CONCEPT,Caching
+No Caching,CAUSES,High Latency
+High Latency,MITIGATED_BY,Redis
+Backend,HAS_SKILL,Microservices
+Microservices,HAS_CONCEPT,Service Discovery
+Microservices,HAS_CONCEPT,Load Balancing
+Microservices,HAS_CONCEPT,Circuit Breaker
+No Circuit Breaker,CAUSES,Cascading Failure
+DataScience,HAS_SKILL,Statistics
+Statistics,HAS_CONCEPT,Hypothesis Testing
+Statistics,HAS_CONCEPT,P Value
+Statistics,HAS_CONCEPT,Confidence Interval
+DevOps,HAS_SKILL,Docker
+Docker,HAS_CONCEPT,Containerization
+Docker,HAS_CONCEPT,Image Optimization
+HR_PM,HAS_SKILL,Agile
+Agile,HAS_CONCEPT,Sprint Planning
+Agile,HAS_CONCEPT,Retrospective
