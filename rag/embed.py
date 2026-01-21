@@ -1,5 +1,10 @@
 from sentence_transformers import SentenceTransformer
-model = SentenceTransformer("all-MiniLM-L6-v2")
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+model = SentenceTransformer(os.getenv("EMBEDDING_MODEL"))
 
 def embed(text: str):
     return model.encode(text)

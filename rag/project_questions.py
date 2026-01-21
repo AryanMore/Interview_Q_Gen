@@ -1,26 +1,26 @@
 from llm.generate_questions import generate
 from rag.concept_expansion import expand_concepts
 
-def project_prompt(project, skills):
-
-    concepts = expand_concepts()
+def project_prompt(project_text, skills):
 
     prompt = f"""
-You are a senior interviewer.
+You are a senior technical interviewer.
 
-Project Description:
-{project}
+The candidate has worked on the following projects:
 
-Skills Inferred: {', '.join(skills)}
+{project_text}
 
-Generate 6 interview questions:
+Generate interview questions that:
 
-1-2: Architecture & Design  
-3-4: Implementation details  
-5: Debugging challenge  
-6: Business impact
+1. Refer explicitly to these projects  
+2. Cover:
+   - design decisions  
+   - implementation details  
+   - challenges faced  
+   - impact/outcomes  
 
-Make questions specific to THIS project.
+Do NOT ask generic theory questions.
+Group questions per project if possible.
 """
 
     return generate(prompt)

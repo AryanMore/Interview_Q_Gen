@@ -5,6 +5,8 @@ from rag.retrieve import retrieve
 from rag.prompt_builder import build_prompt
 from llm.generate_questions import generate
 from rag.project_questions import project_prompt
+from rag.retrieve import retrieve
+
 
 import shutil, os
 
@@ -22,6 +24,7 @@ async def upload_resume(file: UploadFile, role: str = Form(...)):
     with open(path, "wb") as buffer:
         shutil.copyfileobj(file.file, buffer)
 
+
     build_graph(path)
 
     project_qs = []
@@ -37,12 +40,15 @@ async def upload_resume(file: UploadFile, role: str = Form(...)):
         print("PROJECTS FROM NEO4J:", projects)
 
 
+    project_block = ""
+
     for p in projects:
-        project_qs.append({
-            "project": p["project"],
-            "skills": p["skills"],
-            "questions": project_prompt(p["project"], p["skills"])
-        })
+        project_block += f"\n- {p['project']}\n"
+
+    project_qs = [{
+        "project": "Candidate Projects",
+        "questions": project_prompt(project_block, [])
+    }]
     
 
     concepts = expand_concepts()

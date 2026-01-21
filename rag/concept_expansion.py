@@ -1,8 +1,18 @@
 from neo4j import GraphDatabase
 
-uri="bolt://localhost:7687"
-auth=("neo4j","password")
-driver=GraphDatabase.driver(uri,auth=auth)
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+
+driver = GraphDatabase.driver(
+    os.getenv("NEO4J_URI"),
+    auth=(
+        os.getenv("NEO4J_USER"),
+        os.getenv("NEO4J_PASSWORD")
+    )
+)
 
 def expand_concepts():
     with driver.session() as s:

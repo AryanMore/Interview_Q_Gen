@@ -28,23 +28,20 @@ if st.button("Generate Questions"):
         if r.status_code == 200:
             res = r.json()
 
-            # ----- Concepts -----
+            
             st.subheader("Expanded Concepts")
             st.write(res["expanded_concepts"])
 
-            # ----- Skill Questions -----
             st.subheader("Skill / Theory Questions")
             st.write(res["skill_questions"])
 
-            # ----- PROJECT QUESTIONS (NEW) -----
             st.subheader("Project-Based Questions")
 
             if res["project_questions"]:
                 for p in res["project_questions"]:
 
-                    st.markdown(f"### 📁 {p['project']}")
+                    st.markdown(f"### {p['project']}")
 
-                    # questions may be string or list
                     qs = p["questions"]
 
                     st.write(qs)

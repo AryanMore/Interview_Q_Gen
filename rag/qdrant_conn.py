@@ -1,12 +1,12 @@
 from qdrant_client import QdrantClient
-from qdrant_client.models import VectorParams, Distance
+import os
+from dotenv import load_dotenv
 
-client = QdrantClient("localhost", port=6333)
-COLLECTION="interview_knowledge"
+load_dotenv()
 
-def init_collection():
-    if COLLECTION not in [c.name for c in client.get_collections().collections]:
-        client.create_collection(
-            collection_name=COLLECTION,
-            vectors_config=VectorParams(size=384, distance=Distance.COSINE)
-        )
+COLLECTION = "interview_knowledge"
+
+client = QdrantClient(
+    url=os.getenv("QDRANT_URL")
+)
+

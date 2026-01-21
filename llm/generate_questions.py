@@ -1,8 +1,12 @@
 import requests
+import os
+from dotenv import load_dotenv
 
-def generate(prompt):
-    r = requests.post("http://localhost:11434/api/generate", json={
-        "model": "mistral",
+load_dotenv()
+
+def generate(prompt: str) -> str:
+    r = requests.post(f"{os.getenv('OLLAMA_URL')}/api/generate", json={
+        "model": os.getenv("OLLAMA_MODEL", "mistral"),
         "prompt": prompt,
         "stream": False
     })

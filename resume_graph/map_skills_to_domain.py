@@ -1,8 +1,16 @@
 from neo4j import GraphDatabase
+import os
+from dotenv import load_dotenv
 
-uri="bolt://localhost:7687"
-auth=("neo4j","password")
-driver=GraphDatabase.driver(uri,auth=auth)
+load_dotenv()
+
+driver = GraphDatabase.driver(
+    os.getenv("NEO4J_URI"),
+    auth=(
+        os.getenv("NEO4J_USER"),
+        os.getenv("NEO4J_PASSWORD")
+    )
+)
 
 def map_skills():
     with driver.session() as s:

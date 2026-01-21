@@ -1,9 +1,18 @@
 from neo4j import GraphDatabase
 import pandas as pd
+import os
+from dotenv import load_dotenv
 
-uri="bolt://localhost:7687"
-auth=("neo4j","password")
-driver=GraphDatabase.driver(uri,auth=auth)
+load_dotenv()
+
+
+driver = GraphDatabase.driver(
+    os.getenv("NEO4J_URI"),
+    auth=(
+        os.getenv("NEO4J_USER"),
+        os.getenv("NEO4J_PASSWORD")
+    )
+)
 
 df=pd.read_csv("domain_graph.csv")
 
