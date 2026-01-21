@@ -18,3 +18,7 @@ qdrant-client
 numpy
 pandas
 scikit-learn
+
+# Pytest
+pytest
+httpx
